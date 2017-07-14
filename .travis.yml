@@ -1,30 +1,22 @@
 language: objective-c
 sudo: false
 osx_image: xcode8.3
-
 matrix:
   include:
-    - os: osx
-      env: ACTION=test_ios10
-    - os: osx
-      env: ACTION=test_ios9
-    # - os: osx
-    #   env: ACTION=test_macos
-    - os: osx
-      env: ACTION=test_tvos10
-    # - os: osx
-    #   env: ACTION=build_watchos
-    - os: osx
-      env: ACTION=pod_lint
-    # - os: osx
-    #   env: ACTION=carthage_build
-    # - os: osx
-    #   env: ACTION=spm_macos
-
+  - os: osx
+    env: ACTION=test_ios10
+  - os: osx
+    env: ACTION=test_ios9
+  - os: osx
+    env: ACTION=test_tvos10
+  - os: osx
+    env: ACTION=pod_lint
 before_script:
-  - brew update
-  - brew outdated carthage || brew upgrade carthage
-  - carthage bootstrap
-
+- brew update
+- brew outdated carthage || brew upgrade carthage
+- carthage bootstrap
 script:
-  - bundle exec fastlane $ACTION
+- bundle exec fastlane $ACTION
+env:
+  global:
+    secure: fkABTv+X/yGt2MazDP8X5cwtZoLyJsvwFoe0XtJubZO+542m5yy6W0dQaZUQmN+2driNYipuS4C2drQtsBSy02d7JLPtqr/XREhrvhApwMRt0SxLLdGdBVNj1Xqi9XzhAukaCNaDOvcufYAEMxbaImoQ2+6+yMuSxcGytNE0Fmw=
