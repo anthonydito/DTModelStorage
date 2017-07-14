@@ -24,7 +24,7 @@ matrix:
 before_script:
   - brew update
   - brew outdated carthage || brew upgrade carthage
-  - carthage update
+  - carthage bootstrap
 
 script:
   - bundle exec fastlane $ACTION
