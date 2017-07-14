@@ -1,6 +1,9 @@
 language: objective-c
 sudo: false
 osx_image: xcode8.3
+cache:
+  directories:
+  - Carthage
 matrix:
   include:
   - os: osx
@@ -14,7 +17,7 @@ matrix:
 before_script:
 - brew update
 - brew outdated carthage || brew upgrade carthage
-- carthage bootstrap
+- carthage bootstrap --cache-builds
 script:
 - bundle exec fastlane $ACTION
 env:
