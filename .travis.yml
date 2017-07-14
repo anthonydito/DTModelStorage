@@ -19,4 +19,4 @@ script:
 - bundle exec fastlane $ACTION
 env:
   global:
-    secure: fkABTv+X/yGt2MazDP8X5cwtZoLyJsvwFoe0XtJubZO+542m5yy6W0dQaZUQmN+2driNYipuS4C2drQtsBSy02d7JLPtqr/XREhrvhApwMRt0SxLLdGdBVNj1Xqi9XzhAukaCNaDOvcufYAEMxbaImoQ2+6+yMuSxcGytNE0Fmw=
+    secure: QMMiDhnweks61BDz/k3ok0flerERQdSvuWSfz1K+VHYqB9Y4WhIexPXIyDheDiyRJCrWmouF9BQ2pObpdumz/KQghAq3Bv6bTgCzbJGyWj03FE0ndikTX/dlV6KjBMcaS7VMHpB+KdV6ttx09CT43kwKR4vW06/vLqvc9I5i8aM=
